@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  background-color: blue;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: #844646;
+  padding: 2em;
+  /* height: 100vh; */
+  /* flex: 1; */
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  width: 20em;
+  min-width: 10em;
+  height: 35em;
+  padding: 1em 2.5em;
+  margin: 1em;
+  overflow: scroll;
+}
+
+.presentation h1 {
+  font-size: 2em;
+}
+
+.presentation p {
+  font-size: .8em;
+}
+
+.presentation ul {
+  padding: 0;
+  margin: 0;
+}
+
+.presentation li {
+  margin: 5px;
+}
+
+.glhf {
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.start-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  cursor: pointer;
+}
+
+.start-button p {
+  margin: 0;
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 3px red;
+}
+
+.start-button-2 {
+  margin: 1em;
+}
+
+.start-button-2 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button-2 p {
+  margin: 0;
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 3px red;
+}
