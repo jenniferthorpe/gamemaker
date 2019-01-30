@@ -14,11 +14,14 @@ main {
   /* flex: 1; */
 }
 
-.presentation {
+.infobox {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* färg på inforuta? */
   background-color: lightgray;
+  
   width: 20em;
   min-width: 10em;
   height: 35em;
@@ -27,20 +30,20 @@ main {
   overflow: scroll;
 }
 
-.presentation h1 {
+.infobox h1 {
   font-size: 2em;
 }
 
-.presentation p {
+.infobox p {
   font-size: .8em;
 }
 
-.presentation ul {
+.infobox ul {
   padding: 0;
   margin: 0;
 }
 
-.presentation li {
+.infobox li {
   margin: 5px;
 }
 
@@ -57,7 +60,7 @@ main {
   cursor: pointer;
 }
 
-.start-button p {
+.start-button-text {
   margin: 0;
   position: absolute;
   font-size: 2em;
