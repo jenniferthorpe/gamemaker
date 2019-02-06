@@ -101,6 +101,28 @@ button.knappen:hover, button.knappen:focus {
   max-width: 350px;
 }
 
+.animation {
+  font-size: 1.2em;
+  animation-name: pointAnimation;
+  animation-duration: 1.5s;
+}
+.textAnimation {
+  font-size: 1.2em;
+  animation-name: textAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pointAnimation {
+  0% {font-size: 1.2em;}
+  50% {font-size: 2em;}
+  100% {font-size: 1.2em;}
+}
+@keyframes textAnimation {
+  0% {font-size: 1.2em;}
+  100% {font-size: 2em;}
+}
+
 /* SHOTGUN-SIDA */
 
 .shotgun-page {

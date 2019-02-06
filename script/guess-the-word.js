@@ -1,3 +1,21 @@
+let points = document.getElementById("points");
+let pointsText = document.getElementById("pointsText");
+let answer = document.getElementsByName("list");
+let winButton = document.getElementsByClassName("knappen")[0];
+let totalPoints = 0;
+let timer;
+
+let animation = document.getElementById("points");
+
+function addClass () {
+    animation.classList.add("animation");
+}
+function addClassText () {
+    animation.classList.add("textAnimation");
+}
+function removeClass () {
+    animation.classList.remove("animation");
+}
 
 //Slumpar fram ett ord att matcha med
 function randomFunction() {
@@ -5,13 +23,13 @@ function randomFunction() {
     let randomNumber = Math.floor((Math.random() * 3) +1);
     
     if (randomNumber === 1){
-        computersChoise = "Doggy";
+        computersChoise = "Engage in activity for enjoyment and recreation rather than a serious or practical purpose.";
     }
     else if (randomNumber === 2){
-        computersChoise = "Brain";
+        computersChoise = "Physical harm that impairs the value, usefulness, or normal function of something.";
     }
     else {
-        computersChoise = "Game"
+        computersChoise = "A written or printed work consisting of pages glued or sewn together along one side and bound in covers."
     }
     
     //skriver ut det framslumpade ordet
@@ -20,7 +38,7 @@ function randomFunction() {
     
     //ändrar text på knapp
     let winButton = document.getElementsByClassName("knappen")[0];
-    winButton.innerText = "Press to generate a word";
+    // winButton.innerText = "Press to generate a word";
     
     //visar svarsalternativen
     let usersList = document.getElementsByClassName("usersList")[0];
@@ -29,45 +47,57 @@ function randomFunction() {
     //döljer tidigare meddelande
     let message = document.getElementById("message");
     message = message.style.display="none";
+    let messageImg = document.getElementById("messageImg");
+    messageImg = messageImg.style.display="none";
     
-}
+    //döljer knappen
+    winButton = winButton.style.display="none";
 
-let points = document.getElementById("points");
-let answer = document.getElementsByName("list");
-let totalPoints = 0;
+    pointsText.innerHTML = "Points:";
+
+
+    removeClass();
+}
 
 
 //kontrollerar användarens svar
 function checkAnswer() {
-
+    
     for(i=0;i<answer.length;i++){
         if(answer[i].checked){
-            if(computersChoise == "Brain" && answer[i].value == "damage"){
-                message.style.display="block";
-                message.innerHTML = "Well done! Press the button to try again.";
+            if(computersChoise == "Physical harm that impairs the value, usefulness, or normal function of something." && answer[i].value == "Damage"){
+                // message.style.display="block";
+                // message.innerHTML = "Well done!";
                 totalPoints++;
                 points.innerHTML = totalPoints;
+                timer = setTimeout(randomFunction, 2000);
+                addClass();
                 break;
             }
-            if(computersChoise == "Doggy" && answer[i].value == "bag"){
-                message.style.display="block";
-                message.innerHTML = "Well done! Press the button to try again.";
+            if(computersChoise == "Engage in activity for enjoyment and recreation rather than a serious or practical purpose." && answer[i].value == "Play"){
+                // message.style.display="block";
+                // message.innerHTML = "Well done!";
                 totalPoints++;
                 points.innerHTML = totalPoints;
+                timer = setTimeout(randomFunction, 2000);
+                addClass();
                 break;
             }
-            if(computersChoise == "Game" && answer[i].value == "plan"){
-                message.style.display="block";
-                message.innerHTML = "Well done! Press the button to try again.";
+            if(computersChoise == "A written or printed work consisting of pages glued or sewn together along one side and bound in covers." && answer[i].value == "Book"){
+                // message.style.display="block";
+                // message.innerHTML = "Well done!";
                 totalPoints++;
                 points.innerHTML = totalPoints;
+                timer = setTimeout(randomFunction, 2000);
+                addClass();
                 break;
             }
             else {
-                message.style.display="block";
-                message.innerHTML = "<img src='../images/facepalm.jpg' alt='Italian Trulli' width='300px'></img>";
+                messageImg.style.display="block";
+                messageImg.innerHTML = "<img src='../images/facepalm.jpg' alt='Italian Trulli' width='250px'></img>";
                 totalPoints--;
                 points.innerHTML = totalPoints;
+                timer = setTimeout(randomFunction, 1500);
             }
         }
     }
@@ -78,13 +108,16 @@ function checkAnswer() {
 
 //kontrollera om spelet är vunnet
 function checkWin (totalPoints){
-    if(totalPoints == 2){
+    if(totalPoints == 5){
         message.style.display="block";
         message.innerHTML = "Congratulations! You won!"
-        let winButton = document.getElementsByClassName("knappen")[0];
+        message.classList.add("textAnimation");
+        winButton.style.display = "block";
         winButton.innerText = "Press to play again";
         totalPoints = 0;
-        points.innerHTML = totalPoints;
+        points.innerHTML = "";
+        pointsText.innerHTML ="";
+        clearTimeout(timer);        
         return totalPoints;
     }
     else {
