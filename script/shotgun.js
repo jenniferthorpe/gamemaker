@@ -15,6 +15,8 @@ function start() {
 		gameArea.removeChild(startArea);
 	});
 
+	// interface(input, gameArea);
+
 	gameArea.appendChild(startArea);
 	startArea.appendChild(input);
 	startArea.appendChild(startBtn);
@@ -27,9 +29,22 @@ function interface(input, gameArea) {
 	let cmp = new Player('data');
 
 	let interface = document.createElement('div');
+	interface.style.border = 'solid';
+	interface.style.backgroundColor = 'white';
+	interface.style.height = '40%';
+	interface.style.width = '50%';
+	// interface.style.display = 'flex';
+	// interface.style.flexDirection = 'column';
+	// interface.style.justifyContent = 'space-around';
+	// interface.style.alignItems = 'center';
+	interface.style.textAlign = 'center';
+
 	gameArea.appendChild(interface);
 
 	let buttons = document.createElement('div');
+	// buttons.style.border = "solid";
+	buttons.style.display = 'flex';
+	buttons.style.justifyContent = 'space-between';
 
 	let reloadBtn = document.createElement('button');
 	let t = document.createTextNode('reload');
@@ -73,18 +88,28 @@ function interface(input, gameArea) {
 
 	let bulletCountUsr = document.createElement('p');
 	bulletCountUsr.innerHTML = usr.name + ' ammo';
+	// bulletCountUsr.style.border = 'solid';
+	// bulletCountUsr.style.margin = '0';
 
 	let ammoUsr = document.createElement('p');
 	ammoUsr.innerHTML = usr.bullets;
+	// ammoUsr.style.border = 'solid';
+	// ammoUsr.style.margin = '0';
 
 	let bulletCountCmp = document.createElement('p');
 	bulletCountCmp.innerHTML = cmp.name + ' ammo';
+	// bulletCountCmp.style.border = 'solid';
+	// bulletCountCmp.style.margin = '0';
 
 	let ammoCmp = document.createElement('p');
 	ammoCmp.innerHTML = cmp.bullets;
+	// ammoCmp.style.border = 'solid';
+	// ammoCmp.style.margin = '0';
 
 	let msg = document.createElement('p');
+	// msg.style.margin = '0';
   let msg2 = document.createElement('p');
+	// msg2.style.margin = '0';
 
 	interface.appendChild(buttons);
 
@@ -144,6 +169,9 @@ function interface(input, gameArea) {
 	    + ' while ' + cmp.name + ' ' + cmp.action;
 
 			msg2.innerHTML = '';
+
+			// msg2.innerHTML = usr.name + ' fumbles with it while '
+			// + cmp.name + ' looks confused and the battle continues';
 
 			if (usr.action === 'shoots' && cmp.action === 'shoots') {
 

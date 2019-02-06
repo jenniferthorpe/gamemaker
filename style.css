@@ -36,12 +36,16 @@ main {
   justify-content: center;
 }
 
-/* STARTSIDA */
-
-.start-page {
+section {
   height: 100%;
   width: 75%;
   display: flex;
+  background-color: #844646;
+}
+
+/* STARTSIDA */
+
+.start-page {
   justify-content: space-around;
   align-items: flex-start;
   background-color: darkgray;
@@ -58,12 +62,8 @@ main {
 /* GISSA ORDET-SIDA */
 
 .guess-the-word-page {
-  height: 100%;
-  width: 75%;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #844646;
 }
 
 .usersList {
@@ -73,35 +73,39 @@ main {
 /* SHOTGUN-SIDA */
 
 .shotgun-page {
-  height: 100%;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #844646;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
-.shotgun-page div {
-  /* background-color: white; */
-  /* width: 75%; */
-  height: 25%;
-  /* text-align: center; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
+.shotgun-page .start-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.interface {
+  /* border: solid; */
+  margin: 2em;
+  /* background-color: cyan; */
+  color: cyan;
+  align-self: center;
+  width: 15em;
+  height: 17.5em;
+  text-align: center;
+}
+
+.interface .buttons {
+  /* border: solid; */
+  display: flex;
+  justify-content: space-between;
 }
 
 /* STEN SAX PÅSE-SIDA */
 
 .rock-paper-scissors-page {
-  height: 100%;
-  width: 75%;
-  display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  background-color: #844646;
 }
 
 .infobox {
