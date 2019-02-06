@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+
 body {
   height: 100vh;
   margin: 0;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+h1, h2 {
+  font-family: 'Lato', sans-serif;
 }
 
 /* HEADER */
@@ -10,7 +19,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5454F5;
+  background-color: #0B86C2;
 }
 
 header img {
@@ -38,7 +47,92 @@ main {
   justify-content: center;
 }
 
+<<<<<<< HEAD
 section {
+=======
+button.knappen {
+  background-color: #0b86c2;
+  border: 1px solid #0a6b9a;
+  border-radius: 4px;
+  height: 35px;
+  font-family: monospace;
+  font-size: 15px;
+  padding: 1px 20px;
+  font-weight: bold;
+  color: #f5f3f3;
+}
+
+button.knappen:hover, button.knappen:focus {
+  background-color: #0a6b9a;
+  border-color: #095a82;
+}
+
+/* STARTSIDA */
+
+.start-page {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: darkgray;
+  background-image: url(./images/bakgrundsbild_lighter_opt.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.start-img {
+  margin: 2em 0;
+  height: 17.5%;
+}
+
+/* GISSA ORDET-SIDA */
+
+.guess-the-word-page {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #844646;
+  font-size: 1.1em;
+}
+
+.usersList {
+  display: none;
+}
+
+.start-button-guessword {
+  max-width: 350px;
+}
+
+/* SHOTGUN-SIDA */
+
+.shotgun-page {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #844646;
+}
+
+.shotgun-page div {
+  /* background-color: white; */
+  /* width: 75%; */
+  height: 25%;
+  /* text-align: center; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+/* STEN SAX PÅSE-SIDA */
+
+.rock-paper-scissors-page {
+>>>>>>> 9ed03d557368790c65bb4bfa55be7bdd5887b505
   height: 100%;
   width: 75%;
   display: flex;
@@ -66,7 +160,7 @@ section {
 }
 
 .infobox p {
-  font-size: .8em;
+  font-size: 1em;
 }
 
 .infobox ul {
@@ -90,6 +184,8 @@ section {
   margin: 2em;
   background-color: #844646;
   border: none;
+  font-family: monospace;
+  font-size: 17px;
 }
 
 .start-button a {
@@ -121,7 +217,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #75FF6B;
+  background-color: #06DBB6;
 }
 
 /* STARTSIDA */
