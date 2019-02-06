@@ -31,6 +31,8 @@ nav a {
 
 main {
   background-color: black;
+  /* background-image: url(./images/nes_remix_banner.jpg); */
+  background-size: contain;
   height: 80%;
   display: flex;
   justify-content: center;
@@ -40,72 +42,9 @@ section {
   height: 100%;
   width: 75%;
   display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
   background-color: #844646;
-}
-
-/* STARTSIDA */
-
-.start-page {
-  justify-content: space-around;
-  align-items: flex-start;
-  background-color: darkgray;
-  background-image: url(./images/bakgrundsbild_lighter_opt.jpg);
-  background-size: cover;
-  background-position: top;
-}
-
-.start-img {
-  margin: 2em 0;
-  height: 17.5%;
-}
-
-/* GISSA ORDET-SIDA */
-
-.guess-the-word-page {
-  flex-direction: column;
-  align-items: center;
-}
-
-.usersList {
-  display: none;
-}
-
-/* SHOTGUN-SIDA */
-
-.shotgun-page {
-  justify-content: space-around;
-  align-items: flex-end;
-}
-
-.shotgun-page .start-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.interface {
-  /* border: solid; */
-  margin: 2em;
-  /* background-color: cyan; */
-  color: cyan;
-  align-self: center;
-  width: 15em;
-  height: 17.5em;
-  text-align: center;
-}
-
-.interface .buttons {
-  /* border: solid; */
-  display: flex;
-  justify-content: space-between;
-}
-
-/* STEN SAX PÅSE-SIDA */
-
-.rock-paper-scissors-page {
-  justify-content: space-around;
-  align-items: flex-end;
 }
 
 .infobox {
@@ -146,6 +85,7 @@ section {
 }
 
 .start-button {
+  width: 35em;
   padding: 0;
   margin: 2em;
   background-color: #844646;
@@ -182,4 +122,60 @@ footer {
   justify-content: space-between;
   align-items: center;
   background-color: #75FF6B;
+}
+
+/* STARTSIDA */
+
+.start-page {
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: darkgray;
+  background-image: url(./images/bakgrundsbild_lighter_opt.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.start-img {
+  margin: 2em 0;
+  height: 17.5%;
+}
+
+/* GISSA ORDET-SIDA */
+
+.guess-the-word-page {
+  flex-direction: column;
+  align-items: center;
+}
+
+.usersList {
+  display: none;
+}
+
+/* SHOTGUN-SIDA */
+
+.shotgun-page .infobox ul {
+  font-size: .8em;
+}
+
+.shotgun-page .start-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  align-self: center;
+}
+
+.interface {
+  margin: 2em;
+  align-self: center;
+  width: 15em;
+  height: 17.5em;
+  text-align: center;
+}
+
+.interface .buttons {
+  /* border: solid; */
+  display: flex;
+  justify-content: space-between;
 }
