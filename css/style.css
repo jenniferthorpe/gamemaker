@@ -139,7 +139,7 @@ footer {
   justify-content: space-around;
   align-items: flex-start;
   background-color: darkgray;
-  background-image: url(./images/bakgrundsbild_lighter_opt.jpg);
+  background-image: url(../images/bakgrundsbild_lighter_opt.jpg);
   background-size: cover;
   background-position: top;
 }
