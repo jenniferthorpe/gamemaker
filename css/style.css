@@ -164,3 +164,24 @@ footer {
 .usersList {
   display: none;
 }
+
+.start-button-guessword {
+  max-width: 350px;
+}
+
+button.knappen {
+  background-color: #0b86c2;
+  border: 1px solid #0a6b9a;
+  border-radius: 4px;
+  height: 35px;
+  font-family: monospace;
+  font-size: 15px;
+  padding: 1px 20px;
+  font-weight: bold;
+  color: #f5f3f3;
+}
+
+button.knappen:hover, button.knappen:focus {
+  background-color: #0a6b9a;
+  border-color: #095a82;
+}
