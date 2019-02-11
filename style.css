@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
-
 body {
   height: 100vh;
   margin: 0;
@@ -47,32 +46,96 @@ main {
   justify-content: center;
 }
 
-<<<<<<< HEAD
 section {
-=======
-button.knappen {
-  background-color: #0b86c2;
-  border: 1px solid #0a6b9a;
-  border-radius: 4px;
-  height: 35px;
-  font-family: monospace;
-  font-size: 15px;
-  padding: 1px 20px;
-  font-weight: bold;
-  color: #f5f3f3;
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: #844646;
 }
 
-button.knappen:hover, button.knappen:focus {
-  background-color: #0a6b9a;
-  border-color: #095a82;
+.infobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  width: 30%;
+  min-width: 20%;
+  height: 80%;
+  padding: 1em 2.5em;
+  margin: 2em;
+  overflow: auto;
+}
+
+.infobox h1 {
+  margin: .5em 0;
+  font-size: 2em;
+}
+
+.infobox p {
+  font-size: .8em;
+}
+
+.infobox ul {
+  padding: 0;
+  margin: 0;
+}
+
+.infobox li {
+  margin: 5px;
+}
+
+.glhf {
+  font-size: 2em;
+  margin: 1em;
+  text-align: center;
+}
+
+.start-button {
+  width: 35em;
+  height: 15em;
+  padding: 0;
+  margin: 2em;
+  background-color: #844646;
+  border: none;
+}
+
+.start-button a {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.start-button img {
+  width: 100%;
+}
+
+.start-button-text {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 3px red;
+}
+
+/* FOOTER */
+
+footer {
+  height: 10%;
+  padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #75FF6B;
 }
 
 /* STARTSIDA */
 
 .start-page {
-  height: 100%;
-  width: 75%;
-  display: flex;
   justify-content: space-around;
   align-items: flex-start;
   background-color: darkgray;
@@ -106,6 +169,23 @@ button.knappen:hover, button.knappen:focus {
   max-width: 350px;
 }
 
+button.knappen {
+  background-color: #0b86c2;
+  border: 1px solid #0a6b9a;
+  border-radius: 4px;
+  height: 35px;
+  font-family: monospace;
+  font-size: 15px;
+  padding: 1px 20px;
+  font-weight: bold;
+  color: #f5f3f3;
+}
+
+button.knappen:hover, button.knappen:focus {
+  background-color: #0a6b9a;
+  border-color: #095a82;
+}
+
 /* SHOTGUN-SIDA */
 
 .shotgun-page {
@@ -117,137 +197,6 @@ button.knappen:hover, button.knappen:focus {
   justify-content: center;
   background-color: #844646;
 }
-
-.shotgun-page div {
-  /* background-color: white; */
-  /* width: 75%; */
-  height: 25%;
-  /* text-align: center; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-
-/* STEN SAX PÅSE-SIDA */
-
-.rock-paper-scissors-page {
->>>>>>> 9ed03d557368790c65bb4bfa55be7bdd5887b505
-  height: 100%;
-  width: 75%;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  background-color: #844646;
-}
-
-.infobox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: lightgray;
-  width: 30%;
-  min-width: 20%;
-  height: 80%;
-  padding: 1em 2.5em;
-  margin: 2em;
-  overflow: auto;
-}
-
-.infobox h1 {
-  margin: .5em 0;
-  font-size: 2em;
-}
-
-.infobox p {
-  font-size: 1em;
-}
-
-.infobox ul {
-  padding: 0;
-  margin: 0;
-}
-
-.infobox li {
-  margin: 5px;
-}
-
-.glhf {
-  font-size: 2em;
-  margin: 1em;
-  text-align: center;
-}
-
-.start-button {
-  width: 35em;
-  padding: 0;
-  margin: 2em;
-  background-color: #844646;
-  border: none;
-  font-family: monospace;
-  font-size: 17px;
-}
-
-.start-button a {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.start-button img {
-  width: 100%;
-}
-
-.start-button-text {
-  width: 100%;
-  margin: 0;
-  position: absolute;
-  font-size: 2em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  text-shadow: 2px 3px red;
-}
-
-/* FOOTER */
-
-footer {
-  height: 10%;
-  padding: 0 2em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #06DBB6;
-}
-
-/* STARTSIDA */
-
-.start-page {
-  justify-content: space-around;
-  align-items: flex-start;
-  background-color: darkgray;
-  background-image: url(./images/bakgrundsbild_lighter_opt.jpg);
-  background-size: cover;
-  background-position: top;
-}
-
-.start-img {
-  margin: 2em 0;
-  height: 17.5%;
-}
-
-/* GISSA ORDET-SIDA */
-
-.guess-the-word-page {
-  flex-direction: column;
-  align-items: center;
-}
-
-.usersList {
-  display: none;
-}
-
-/* SHOTGUN-SIDA */
 
 .shotgun-page .infobox ul {
   font-size: .8em;
@@ -274,4 +223,15 @@ footer {
   /* border: solid; */
   display: flex;
   justify-content: space-between;
+}
+
+/* STEN SAX PÅSE-SIDA */
+
+.rock-paper-scissors-page {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: #844646;
 }
