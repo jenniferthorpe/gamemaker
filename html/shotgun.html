@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Shotgun</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="../script/shotgun_v2.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shotgun_v3.css">
+    <script src="../script/shotgun_v3.js" defer></script>
   </head>
-  <body onload="">
+  <body onload="newGame()">
     <header>
       <img src="../images/kontroll.png" alt="logo img">
       <nav>
@@ -19,23 +20,19 @@
     <main>
       <section class="shotgun-page">
 
-          <div class="infobox">
+          <!-- <div class="infobox">
             <h1>Shotgun</h1>
-
-            <!-- förslag på fakta om spelet -->
-
             <h2>Rules</h2>
             <ul>
               <li>In order to shoot you need to reload first</li>
-              <li>If you use block no bullet won't harm you</li>
+              <li>If you use block no bullet will harm you</li>
               <li>If you reload 3 times you may use the shotgun
               - which can't be blocked</li>
             </ul>
             <div class="glhf">Have fun!</div>
-          </div>
+          </div> -->
 
           <button type="button" class="start-button" onclick="newGame()">
-              <!-- <img src="../images/sten-sax-pase.png" alt="Sten Sax Påse"> -->
               <img src="../images/shotgun_crop.png" alt="shotgun">
               <div class="start-button-text">start game</div>
           </button>

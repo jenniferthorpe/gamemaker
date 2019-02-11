@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
 body {
   height: 100vh;
   margin: 0;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+h1, h2 {
+  font-family: 'Lato', sans-serif;
 }
 
 /* HEADER */
@@ -86,6 +94,7 @@ section {
 
 .start-button {
   width: 35em;
+  height: 15em;
   padding: 0;
   margin: 2em;
   background-color: #844646;
@@ -149,33 +158,4 @@ footer {
 
 .usersList {
   display: none;
-}
-
-/* SHOTGUN-SIDA */
-
-.shotgun-page .infobox ul {
-  font-size: .8em;
-}
-
-.shotgun-page .start-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  align-self: center;
-}
-
-.interface {
-  margin: 2em;
-  align-self: center;
-  width: 15em;
-  height: 17.5em;
-  text-align: center;
-}
-
-.interface .buttons {
-  /* border: solid; */
-  display: flex;
-  justify-content: space-between;
 }
