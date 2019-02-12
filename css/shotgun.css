@@ -1,0 +1,70 @@
+.shotgun-page .infobox ul {
+  font-size: .8em;
+}
+
+.shotgun-page .start-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  align-self: center;
+}
+
+.interface {
+  /* background-color: blue; */
+  /* border: solid; */
+  /* align-self: center; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* align-content: space-around; */
+  text-align: center;
+  margin: 2em;
+  width: 15em;
+  height: 80%;
+  padding: 1em 2.5em;
+  margin: 2em;
+}
+
+.interface .buttons {
+  /* border: solid; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 5em;
+  width: 75%;
+}
+
+.interface p {
+  /* border: solid; */
+}
+
+.buttons button {
+  height: 50%;
+  width: 50%;
+  /* margin: 10px; */
+}
+
+#block-btn {
+  /* order: -1; */
+}
+
+#shoot-btn {
+  width: 75%;
+  height: 50%;
+  font-size: 1em;
+  /* letter-spacing: 5px; */
+  text-transform: uppercase;
+}
+
+#shotgun-btn {
+  width: 100%;
+  height: 100%;
+}
+
+#continue-btn {
+  align-self: center;
+}

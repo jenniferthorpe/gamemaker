@@ -1,0 +1,11 @@
+.start-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2em;
+}
+
+.start-button:hover {
+  /* max-width: 31em; */
+}

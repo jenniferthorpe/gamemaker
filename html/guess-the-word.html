@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guess the word</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header>
+      <img src="../images/kontroll.png" alt="logo img">
+      <nav>
+        <a class="menubuttons" href="start.html">Home</a>
+        <a class="menubuttons" href="guess-the-word.html">Guess The Word</a>
+        <a class="menubuttons" href="shotgun.html">Shotgun</a>
+        <a class="menubuttons" href="rock-paper-scissors.html">Rock Paper Scissors</a>
+      </nav>
+    </header>
+    <main>
+      <section class="guess-the-word-page">
+        <br>
+        <h2 id="h2">Welcome!</h2>
+        <br>
+        <button onclick="randomFunction()" class="knappen">Press to generate a word</button>
+        <br>
+        <div class="usersList">
+          <input type="radio" name="list" id="damage" value="damage" onclick="checkAnswer()">damage
+          <input type="radio" name="list" id="plan" value="plan" onclick="checkAnswer()">plan
+          <input type="radio" name="list" id="bag" value="bag" onclick="checkAnswer()">bag
+        </div>
+        <br>
+        <h3 id="message"></h3>
+        <div>Points: </div><h3 id="points"></h3>
+      </section>
+    </main>
+    <footer>
+      <div>
+        ©Gamemaker AB, 2019
+      </div>
+      <address>
+        Nackademin <br>
+        Tomtebodavägen 3A <br>
+        171 65 Solna
+      </address>
+    </footer>
+  </body>
+  <script src="../script/guess-the-word.js"></script>
+</html>
