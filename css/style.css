@@ -93,18 +93,24 @@ section {
 }
 
 .start-button {
-  width: 35em;
-  height: 15em;
+  max-width: 30em;
+
+  margin: 3em;
   padding: 0;
-  margin: 2em;
-  background-color: #844646;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: black;
+  border-radius: 1em;
   border: none;
 }
 
-.start-button a {
-  display: flex;
-  align-items: center;
-  position: relative;
+.start-button:hover {
+  max-width: 35em;
 }
 
 .start-button img {
@@ -113,13 +119,26 @@ section {
 
 .start-button-text {
   width: 100%;
-  margin: 0;
+  height: 100%;
+
   position: absolute;
-  font-size: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   color: white;
+  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 5px;
   text-shadow: 2px 3px red;
+}
+
+.start-button-text:hover {
+  font-style: italic;
+  color: red;
+  text-shadow: 2px 3px white;
+  font-size: 4em;
 }
 
 /* FOOTER */
