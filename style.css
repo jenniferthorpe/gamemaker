@@ -96,8 +96,8 @@ button.knappen:hover, button.knappen:focus {
   font-size: 1.1em;
   border: 20px solid black;
   box-sizing: border-box;
-  border-radius: 25px;
-  background-image: linear-gradient(to bottom right, #195a4f, #1ca58c, #186759);
+  border-radius: 24px;
+  background-image: linear-gradient(to bottom right, #0f4239, #169880, #186759);
 }
 
 .usersList {
