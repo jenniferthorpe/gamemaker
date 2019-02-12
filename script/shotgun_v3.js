@@ -143,11 +143,12 @@ function newGame() {
 
   buttonsBottom.appendChild(shootBtn);
 
-  buttonsTop.style.display = 'none';
-  buttonsBottom.style.display = 'none';
+  // buttonsTop.style.display = 'none';
+  // buttonsBottom.style.display = 'none';
   buttonsTop.style.display = 'flex';
   buttonsBottom.style.display = 'flex';
 
+  // reloadBtn.style.display = 'none';
   reloadBtn.style.display = 'block';
 
   blockBtn.style.display = 'none';
