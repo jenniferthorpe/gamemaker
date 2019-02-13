@@ -13,17 +13,26 @@ h1, h2 {
 }
 
 
-#pointsText, #points {
+#pointsText, #points, #pointsTextCPU, #pointsCPU {
     position: absolute;
     top: 65%;
     font-size: 1.5em;
 }
 
+#pointsText, #points {
+  left: 30%;
+}
+
+#pointsTextCPU, #pointsCPU {
+  right: 30%;
+}
+
 .usersList {
     position: absolute;
-    top: 267px;
-    right: 37%;
-    font-size: 1.5em;
+    top: 320px;
+    right: 31%;
+    font-size: 1.7em;
+    font-weight: bold;
 }
 
 /* HEADER */
@@ -176,7 +185,10 @@ footer {
 }
 
 .start-button-guessword {
-  max-width: 350px;
+  max-width: 450px;
+  position: absolute;
+  top: 100px;
+  left: 226px;
 }
 
 

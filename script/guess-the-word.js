@@ -120,7 +120,7 @@ function checkAnswer() {
 
 //kontrollera om spelet är vunnet
 function checkWin (totalPoints){
-    if(totalPoints == 4){
+    if(totalPoints == 5){
         message.style.display="block";
         message.innerHTML = "Congratulations! You won!"
         message.classList.add("textAnimation");

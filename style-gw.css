@@ -214,3 +214,19 @@ button.knappen:hover, button.knappen:focus {
   border-color: #095a82;
 }
 
+.books {
+  width: 320px;
+  height: auto;
+  position: absolute;
+  bottom: 15%;
+  left: 278px;
+  opacity: 0.9;
+}
+.books2 {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: 13%;
+  left: 250px;
+  opacity: 0.7;
+}

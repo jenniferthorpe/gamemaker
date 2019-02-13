@@ -2,26 +2,13 @@ let points = document.getElementById("points");
 let pointsText = document.getElementById("pointsText");
 let answer = document.getElementsByName("list");
 let winButton = document.getElementsByClassName("knappen")[0];
-let el = document.getElementById("h2");
 let usersList = document.getElementsByClassName("usersList")[0];
 let message = document.getElementById("message");
 
-
 let computersChoise;
 let totalPoints = 0;
+let totalPointsCPU = 0;
 let timer;
-
-let animation = document.getElementById("points");
-
-function addClass () {
-    animation.classList.add("animation");
-}
-function addClassText () {
-    animation.classList.add("textAnimation");
-}
-function removeClass () {
-    animation.classList.remove("animation");
-}
 
 //Slumpar fram ett ord att matcha med
 function randomFunction() {
@@ -38,7 +25,8 @@ function randomFunction() {
         computersChoise = "Paper";
     }
 
-    //skriver ut det framslumpade ordet
+    //döljer ut det framslumpade ordet
+    let el = document.getElementById("h2");
     el.innerHTML = computersChoise;
     el = el.style.display = "none";
         
@@ -52,84 +40,85 @@ function randomFunction() {
     winButton = winButton.style.display="none";
 
     pointsText.innerHTML = "Points:";
+    pointsTextCPU.innerHTML = "Points:";
 
-    removeClass();
 }
 
 
 //kontrollerar användarens svar
 function checkAnswer() {
     
-    let el = document.getElementById("h2");
-
     for(i=0;i<answer.length;i++){
         if(answer[i].checked){
             if(computersChoise == "Rock" && answer[i].value == "Paper"){
                 totalPoints++;
                 points.innerHTML = totalPoints;
-                
+                let el = document.getElementById("h2");
+
                 el.innerHTML = computersChoise;
                 el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
             if(computersChoise == "Scissor" && answer[i].value == "Rock"){
                 totalPoints++;
                 points.innerHTML = totalPoints;
+                let el = document.getElementById("h2");
 
                 el.innerHTML = computersChoise;
                 el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
             if(computersChoise == "Paper" && answer[i].value == "Scissor"){
                 totalPoints++;
                 points.innerHTML = totalPoints;
+                let el = document.getElementById("h2");
 
                 el.innerHTML = computersChoise;
                 el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
             if(computersChoise == "Paper" && answer[i].value == "Paper"){
                 points.innerHTML = totalPoints;
+                pointsCPU.innerHTML = totalPointsCPU;
+                let el = document.getElementById("h2");
 
                 el.innerHTML = computersChoise;
                 el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
             if(computersChoise == "Scissor" && answer[i].value == "Scissor"){
                 points.innerHTML = totalPoints;
+                pointsCPU.innerHTML = totalPointsCPU;
+                let el = document.getElementById("h2");
 
                 el.innerHTML = computersChoise;
                 el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
             if(computersChoise == "Rock" && answer[i].value == "Rock"){
                 points.innerHTML = totalPoints;
+                pointsCPU.innerHTML = totalPointsCPU;
+                let el = document.getElementById("h2");
 
                 el.innerHTML = computersChoise;
                 el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
             
             else {
-                totalPoints--;
-                points.innerHTML = totalPoints;
+                totalPointsCPU++;
+                pointsCPU.innerHTML = totalPointsCPU;
+                let el = document.getElementById("h2");
 
                 el.innerHTML = computersChoise;
                 el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
         }
@@ -142,15 +131,18 @@ function checkAnswer() {
 
 //kontrollera om spelet är vunnet
 function checkWin (totalPoints){
-    if(totalPoints == 2){
+    if(totalPoints == 5){
         message.style.display="block";
         message.innerHTML = "Congratulations! You won!"
         message.classList.add("textAnimation");
-        button.style.display = "block";
-        button.innerText = "Press to play again";
+        winButton.style.display = "block";
+        winButton.innerText = "Press to play again";
         totalPoints = 0;
         points.innerHTML = "";
         pointsText.innerHTML ="";
+        pointsCPU.innerHTML = "";
+        pointsTextCPU.innerHTML ="";
+        clearTimeout(timer);
         let usersList = document.getElementsByClassName("usersList")[0];   
         usersList = usersList.style.display="none";
         let el = document.getElementById("h2");
