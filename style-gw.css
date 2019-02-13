@@ -11,6 +11,7 @@ body {
 h1, h2 {
   font-family: 'Lato', sans-serif;
   padding-top: 30px;
+  width: 80%;
 }
 
 /* HEADER */
@@ -22,7 +23,6 @@ header {
   align-items: center;
   background-color: #0B86C2;
   background-image: linear-gradient(#0b5e80, #0B86C2);
-
 }
 
 .flex {
@@ -39,21 +39,11 @@ header {
   width: 220px;
 }
 
-nav {
-  position: absolute;
-}
-
-nav a {
-  color: white;
-  text-shadow: 2px 1px black;
-  margin: 1em;
-}
 
 /* HUVUDBAKGRUND */
 
 main {
   background-color: black;
-  /* background-image: url(./images/nes_remix_banner.jpg); */
   background-size: contain;
   height: 80%;
   display: flex;
@@ -66,14 +56,12 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  background-color: #844646;
 }
 
 .infobox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: lightgray; */
   border: 5px dotted #fff;
   width: 30%;
   min-width: 20%;
@@ -92,15 +80,6 @@ section {
   font-size: 1em;
 }
 
-.infobox ul {
-  padding: 0;
-  margin: 0;
-}
-
-.infobox li {
-  margin: 5px;
-}
-
 .glhf {
   font-size: 2em;
   margin: 1em;
@@ -108,18 +87,12 @@ section {
 }
 
 .start-button {
-  /* width: 35em;
-  height: 15em;
-  padding: 0;
-  margin: 2em;
-  background-color: #844646;
-  border: none; */
   padding: 0;
   margin: 2em;
   background-color: transparent;
   border: none;
   font-family: monospace;
-font-size: 17px;
+  font-size: 17px;
 }
 
 .start-button a {
@@ -157,26 +130,21 @@ footer {
   background-image: linear-gradient(#06DBB6, #13b397);
 }
 
-/* STARTSIDA */
-
-.start-page {
-  height: 100%;
-  width: 75%;
-display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  background-color: darkgray;
-  background-image: url(./images/bakgrundsbild_lighter_opt.jpg);
-  background-size: cover;
-  background-position: top;
-}
-
-.start-img {
-  margin: 2em 0;
-  height: 17.5%;
-}
 
 /* GISSA ORDET-SIDA */
+
+.guess-the-word-page-start {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 1.1em;
+  border: 20px solid black;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background-image: linear-gradient(to bottom right, #0f4239, #169880, #186759);
+}
 
 .guess-the-word-page {
   height: 100%;
@@ -184,7 +152,6 @@ display: flex;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #844646;
   font-size: 1.1em;
   border: 20px solid black;
   box-sizing: border-box;
@@ -211,6 +178,7 @@ h3#points {
   animation-duration: 1.5s;
   height: 0px;
 }
+
 .textAnimation {
   font-size: 1.2em;
   animation-name: textAnimation;
@@ -224,6 +192,7 @@ h3#points {
   50% {font-size: 2em;}
   100% {font-size: 1.2em;}
 }
+
 @keyframes textAnimation {
   0% {font-size: 1.2em;}
   100% {font-size: 2em;}
@@ -245,57 +214,3 @@ button.knappen:hover, button.knappen:focus {
   border-color: #095a82;
 }
 
-/* SHOTGUN-SIDA */
-
-.shotgun-page {
-  height: 100%;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #844646;
-}
-
-.shotgun-page .infobox ul {
-  font-size: .8em;
-}
-
-.shotgun-page .start-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  align-self: center;
-}
-
-.interface {
-  margin: 2em;
-  align-self: center;
-  width: 15em;
-  height: 17.5em;
-  text-align: center;
-}
-
-.interface .buttons {
-  /* border: solid; */
-  display: flex;
-  justify-content: space-between;
-}
-
-/* STEN SAX PÅSE-SIDA */
-
-.rock-paper-scissors-page {
-  height: 100%;
-  width: 75%;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  background-color: #844646;
-  font-size: 1.1em;
-  border: 20px solid black;
-  box-sizing: border-box;
-  border-radius: 24px;
-  background-image: linear-gradient(to bottom right, #0f4239, #169880, #186759);
-}

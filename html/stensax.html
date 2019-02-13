@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Guess the word</title>
-    <link rel="stylesheet" href="../style-gw.css">
+    <link rel="stylesheet" href="../style-stensax.css">
   </head>
   <body>
     <div class="flex">
@@ -17,13 +17,12 @@
       <section class="guess-the-word-page">
         <br>
         <h2 id="h2"></h2>
+        <br>
         <button onclick="randomFunction()" class="knappen">Let's go!</button>
-        <div class="usersList">
-          <input type="radio" name="list" id="Damage" value="Damage" onclick="checkAnswer()">Damage
-          <input type="radio" name="list" id="Book" value="Book" onclick="checkAnswer()">Book
-          <input type="radio" name="list" id="Play" value="Play" onclick="checkAnswer()">Play
-          <input type="radio" name="list" id="Ape" value="Ape" onclick="checkAnswer()">Ape
-          <input type="radio" name="list" id="Telephone" value="Telephone" onclick="checkAnswer()">Telephone
+        <div class="usersList">Välj ett drag:
+          <input type="radio" name="list" id="Rock" value="Rock" onclick="checkAnswer()">Rock
+          <input type="radio" name="list" id="Scissor" value="Scissor" onclick="checkAnswer()">Scissor
+          <input type="radio" name="list" id="Paper" value="Paper" onclick="checkAnswer()">Paper
         </div>
         <h3 id="message"></h3>
         <div id="pointsText">Points: </div><h3 id="points"></h3>
@@ -40,5 +39,5 @@
       </address>
     </footer>
   </body>
-  <script src="../script/guess-the-word.js"></script>
+  <script src="../script/stensax.js"></script>
 </html>
