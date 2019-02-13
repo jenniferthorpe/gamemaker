@@ -147,13 +147,10 @@ function newGame() {
   buttonsBottom.style.display = 'flex';
 
   reloadBtn.style.display = 'block';
-
   blockBtn.style.display = 'none';
-
   shootBtn.style.display = 'none';
 
   sgBtn.style.display = 'none';
-
   continueBtn.style.display = 'none';
 
   interface.appendChild(textbox);

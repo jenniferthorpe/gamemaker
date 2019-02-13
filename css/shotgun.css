@@ -1,6 +1,6 @@
 /*******************************************************************************
 
-                                  START BUTTON
+                            START BUTTON & INFO BOX
 
 *******************************************************************************/
 
@@ -9,8 +9,8 @@
   padding: 2.5em;
 }
 
-.start-button:hover {
-  /* max-width: 35em; */
+.infobox ul {
+  font-size: 1.4em;
 }
 
 /*******************************************************************************
@@ -33,7 +33,14 @@
   text-align: center;
 
   border-radius: 1em;
-  background-color: darkgray;
+  background-color: lightgray;
+}
+
+#buttons-main, #usr-box, #cmp-box, #message-box, #text-box-bottom {
+  border: solid 2px gray;
+  border-radius: 1em;
+  background-color: mediumseagreen;
+  color: #f5f3f3;
 }
 
 /*******************************************************************************
@@ -43,14 +50,16 @@
 *******************************************************************************/
 
 .interface-buttons {
-  border: none;
-  border-radius: 4px;
+  border: 1px solid white;
+  border-radius: 10px;
 
   font-family: monospace;
   font-size: 1.5em;
   font-weight: bold;
   color: #f5f3f3;
   text-shadow: 2px 1px black;
+
+  outline: none;
 }
 
 .interface-buttons:hover {
@@ -60,13 +69,16 @@
 
 #buttons-main {
   height: 35%;
-  width: 100%;
+  width: 90%;
   margin: 1em 0 0;
+  padding: 1em;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: black;
 }
 
 #buttons-top, #buttons-bottom {
@@ -118,14 +130,16 @@
 }
 
 #shotgun-btn {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  background-color: crimson;
+  width: 90%;
+  height: 90%;
+  background-color: darkred;
   text-transform: uppercase;
 }
 
 #shotgun-btn:hover {
+  width: 100%;
+  height: 100%;
+
   background-color: red;
   font-size: 3em;
   letter-spacing: 5px;
@@ -155,13 +169,6 @@
 
 #text-box, #usr-box, #cmp-box, #message-box {
   flex-direction: column;
-}
-
-#usr-box, #cmp-box, #message-box, #text-box-bottom {
-  border: solid 2px gray;
-  border-radius: 1em;
-  background-color: mediumseagreen;
-  color: #f5f3f3;
 }
 
 #text-box {
