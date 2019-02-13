@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
+    <div class="flex">
+    <a href="./start.html" class="logo">
+      <img src="../images/logo-nintendo2.png" alt="logo img">
+    </a>
+  </div>
     <header>
-      <img src="../images/kontroll.png" alt="logo img">
       <nav>
-        <a class="menubuttons" href="start.html">Startsida</a>
+        <!-- <a class="menubuttons" href="start.html">Startsida</a>
         <a class="menubuttons" href="guess-the-word-index.html">Gissa ordet</a>
         <a class="menubuttons" href="shotgun.html">Shotgun</a>
-        <a class="menubuttons" href="rock-paper-scissors.html">Sten sax påse</a>
+        <a class="menubuttons" href="rock-paper-scissors.html">Sten sax påse</a> -->
       </nav>
     </header>
     <main>
@@ -21,13 +25,11 @@
         <h2 id="h2">Welcome!</h2>
         <br>
         <button onclick="randomFunction()" class="knappen">Let's go!</button>
-        <br>
         <div class="usersList">
           <input type="radio" name="list" id="Damage" value="Damage" onclick="checkAnswer()">Damage
           <input type="radio" name="list" id="Book" value="Book" onclick="checkAnswer()">Book
           <input type="radio" name="list" id="Play" value="Play" onclick="checkAnswer()">Play
         </div>
-        <br>
         <h3 id="message"></h3>
         <div id="pointsText">Points: </div><h3 id="points"></h3>
         <h3 id="messageImg"></h3>
