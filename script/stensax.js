@@ -2,65 +2,46 @@ let points = document.getElementById("points");
 let pointsText = document.getElementById("pointsText");
 let answer = document.getElementsByName("list");
 let winButton = document.getElementsByClassName("knappen")[0];
-let el = document.getElementById("h2");
+let usersList = document.getElementsByClassName("usersList")[0];
 let message = document.getElementById("message");
 
+let computersChoise;
 let totalPoints = 0;
+let totalPointsCPU = 0;
 let timer;
-
-let animation = document.getElementById("points");
-
-function addClass () {
-    animation.classList.add("animation");
-}
-function addClassText () {
-    animation.classList.add("textAnimation");
-}
-function removeClass () {
-    animation.classList.remove("animation");
-}
 
 //Slumpar fram ett ord att matcha med
 function randomFunction() {
     
-    let randomNumber = Math.floor((Math.random() * 5) +1);
+    let randomNumber = Math.floor((Math.random() * 3) +1);
     
     if (randomNumber === 1){
-        computersChoise = "Engage in activity for enjoyment and recreation rather than a serious or practical purpose.";
+        computersChoise = "Rock";
     }
     else if (randomNumber === 2){
-        computersChoise = "Physical harm that impairs the value, usefulness, or normal function of something.";
-    }
-    else if (randomNumber === 3){
-        computersChoise = "A large primate that lacks a tail, including the gorilla, chimpanzees, orangutan, and gibbons.";
-    }
-    else if (randomNumber === 4){
-        computersChoise = "A system for transmitting voices over a distance using wire or radio, by converting acoustic vibrations to electrical signals.";
+        computersChoise = "Scissor";
     }
     else {
-        computersChoise = "A written or printed work consisting of pages glued or sewn together along one side and bound in covers.";
+        computersChoise = "Paper";
     }
-    
-    //skriver ut det framslumpade ordet
+
+    //döljer ut det framslumpade ordet
     let el = document.getElementById("h2");
     el.innerHTML = computersChoise;
-    el = el.style.display = "block";
-    
+    el = el.style.display = "none";
+        
     //visar svarsalternativen
-    let usersList = document.getElementsByClassName("usersList")[0];
     usersList = usersList.style.display="block";
     
     //döljer tidigare meddelande
-    let message = document.getElementById("message");
     message = message.style.display="none";
     
     //döljer knappen
-    let winButton = document.getElementsByClassName("knappen")[0];
     winButton = winButton.style.display="none";
 
     pointsText.innerHTML = "Points:";
+    pointsTextCPU.innerHTML = "Points:";
 
-    removeClass();
 }
 
 
@@ -69,51 +50,81 @@ function checkAnswer() {
     
     for(i=0;i<answer.length;i++){
         if(answer[i].checked){
-            if(computersChoise == "Physical harm that impairs the value, usefulness, or normal function of something." && answer[i].value == "Damage"){
+            if(computersChoise == "Rock" && answer[i].value == "Paper"){
                 totalPoints++;
                 points.innerHTML = totalPoints;
+                let el = document.getElementById("h2");
+
+                el.innerHTML = computersChoise;
+                el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
-            if(computersChoise == "Engage in activity for enjoyment and recreation rather than a serious or practical purpose." && answer[i].value == "Play"){
+            if(computersChoise == "Scissor" && answer[i].value == "Rock"){
                 totalPoints++;
                 points.innerHTML = totalPoints;
+                let el = document.getElementById("h2");
+
+                el.innerHTML = computersChoise;
+                el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
-            if(computersChoise == "A written or printed work consisting of pages glued or sewn together along one side and bound in covers." && answer[i].value == "Book"){
+            if(computersChoise == "Paper" && answer[i].value == "Scissor"){
                 totalPoints++;
                 points.innerHTML = totalPoints;
+                let el = document.getElementById("h2");
+
+                el.innerHTML = computersChoise;
+                el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
-            if(computersChoise == "A large primate that lacks a tail, including the gorilla, chimpanzees, orangutan, and gibbons." && answer[i].value == "Ape"){
-                totalPoints++;
+            if(computersChoise == "Paper" && answer[i].value == "Paper"){
                 points.innerHTML = totalPoints;
+                pointsCPU.innerHTML = totalPointsCPU;
+                let el = document.getElementById("h2");
+
+                el.innerHTML = computersChoise;
+                el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
-            if(computersChoise == "A system for transmitting voices over a distance using wire or radio, by converting acoustic vibrations to electrical signals." && answer[i].value == "Telephone"){
-                totalPoints++;
+            if(computersChoise == "Scissor" && answer[i].value == "Scissor"){
                 points.innerHTML = totalPoints;
+                pointsCPU.innerHTML = totalPointsCPU;
+                let el = document.getElementById("h2");
+
+                el.innerHTML = computersChoise;
+                el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
+            if(computersChoise == "Rock" && answer[i].value == "Rock"){
+                points.innerHTML = totalPoints;
+                pointsCPU.innerHTML = totalPointsCPU;
+                let el = document.getElementById("h2");
+
+                el.innerHTML = computersChoise;
+                el = el.style.display = "block";
+                timer = setTimeout(randomFunction, 1500);
+                break;
+            }
+            
             else {
-                totalPoints--;
-                points.innerHTML = totalPoints;
+                totalPointsCPU++;
+                pointsCPU.innerHTML = totalPointsCPU;
+                let el = document.getElementById("h2");
+
+                el.innerHTML = computersChoise;
+                el = el.style.display = "block";
                 timer = setTimeout(randomFunction, 1500);
-                addClass();
                 break;
             }
         }
     }
     
+
     totalPoints = checkWin(totalPoints);
     
 };
@@ -129,8 +140,10 @@ function checkWin (totalPoints){
         totalPoints = 0;
         points.innerHTML = "";
         pointsText.innerHTML ="";
+        pointsCPU.innerHTML = "";
+        pointsTextCPU.innerHTML ="";
         clearTimeout(timer);
-        let usersList = document.getElementsByClassName("usersList")[0];
+        let usersList = document.getElementsByClassName("usersList")[0];   
         usersList = usersList.style.display="none";
         let el = document.getElementById("h2");
         el = el.style.display="none";
