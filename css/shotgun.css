@@ -21,8 +21,8 @@
 *******************************************************************************/
 
 #interface {
-  width: 50%;
-  max-width: 20em;
+  width: 30%;
+  min-width: 20%;
   height: 80%;
   margin: 2em;
   padding: 1em 2.5em;
@@ -33,14 +33,14 @@
   align-items: center;
   text-align: center;
 
+  border: 5px dotted #fff;
   border-radius: 1em;
-  background-color: lightgray;
 }
 
 #buttons-main, #usr-box, #cmp-box, #message-box, #text-box-bottom {
   border: solid 2px gray;
   border-radius: 1em;
-  background-color: mediumseagreen;
+  background-color: lightseagreen;
   color: #f5f3f3;
 }
 

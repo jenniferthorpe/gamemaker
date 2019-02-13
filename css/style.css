@@ -21,8 +21,6 @@ header {
   height: 10%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #0B86C2;
   background-image: linear-gradient(#0b5e80, #0B86C2);
 }
 
@@ -53,8 +51,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #06DBB6;
   background-image: linear-gradient(#06DBB6, #13b397);
+  /* background-image: linear-gradient(#0b5e80, #06DBB6); */
 }
 
 /*******************************************************************************
@@ -112,7 +110,6 @@ section {
 
 .infobox h1 {
   font-size: 2em;
-
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -215,17 +212,15 @@ section {
 *******************************************************************************/
 
 .start-page {
-  justify-content: space-around;
-  align-items: flex-start;
-  background-color: darkgray;
-  background-image: url(../images/background-home.jpg);
-  background-size: cover;
-  background-position: top;
+  border: none;
 }
 
-.start-img {
-  margin: 2em 0;
-  height: 17.5%;
+.b2 {
+  height: 100%;
+}
+
+.start-page area {
+  outline: none;
 }
 
 /*******************************************************************************
