@@ -102,24 +102,21 @@ section {
   align-items: center;
   text-align: center;
 
-  background-color: lightgray;
+  border: 5px dotted #fff;
   border-radius: 1em;
+
+  color: #fff;
 
   overflow: auto;
 }
 
 .infobox h1 {
-  /* margin: .5em 0; */
   font-size: 2em;
 
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
   text-shadow: 2px 3px red;
-}
-
-.infobox h2 {
-  /* margin: 1em 0 0; */
 }
 
 .infobox h3 {
@@ -131,14 +128,14 @@ section {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  border: 2px solid;
+
+  border: 3px dotted #fff;
   border-radius: 1em;
 }
 
 .infobox li {
-  /* margin: 1em; */
   padding: 1em;
-  border-bottom: 2px solid;
+  border-bottom: 3px dotted #fff;
 }
 
 .infobox li:last-child {
