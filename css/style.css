@@ -11,7 +11,11 @@ h1, h2 {
   font-family: 'Lato', sans-serif;
 }
 
-/* HEADER */
+/*******************************************************************************
+
+                                     HEADER
+
+*******************************************************************************/
 
 header {
   height: 10%;
@@ -35,11 +39,30 @@ nav a {
   margin: 1em;
 }
 
-/* HUVUDBAKGRUND */
+/*******************************************************************************
+
+                                     FOOTER
+
+*******************************************************************************/
+
+footer {
+  height: 10%;
+  padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #75FF6B;
+}
+
+/*******************************************************************************
+
+                            STANDARD MAIN BACKGROUND
+
+*******************************************************************************/
 
 main {
   background-color: black;
-  /* background-image: url(./images/nes_remix_banner.jpg); */
+  /* background-image: url(../images/background-retro.jpg); */
   background-size: contain;
   height: 80%;
   display: flex;
@@ -54,6 +77,12 @@ section {
   align-items: flex-end;
   background-color: #844646;
 }
+
+/*******************************************************************************
+
+                               INFO BOX GAME PAGES
+
+*******************************************************************************/
 
 .infobox {
   display: flex;
@@ -91,6 +120,12 @@ section {
   margin: 1em;
   text-align: center;
 }
+
+/*******************************************************************************
+
+                             START BUTTON GAME PAGES
+
+*******************************************************************************/
 
 .start-button {
   max-width: 30em;
@@ -141,24 +176,17 @@ section {
   font-size: 4em;
 }
 
-/* FOOTER */
+/*******************************************************************************
 
-footer {
-  height: 10%;
-  padding: 0 2em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #75FF6B;
-}
+                                  START PAGE
 
-/* STARTSIDA */
+*******************************************************************************/
 
 .start-page {
   justify-content: space-around;
   align-items: flex-start;
   background-color: darkgray;
-  background-image: url(../images/bakgrundsbild_lighter_opt.jpg);
+  background-image: url(../images/background-home.jpg);
   background-size: cover;
   background-position: top;
 }
@@ -168,7 +196,11 @@ footer {
   height: 17.5%;
 }
 
-/* GISSA ORDET-SIDA */
+/*******************************************************************************
+
+                                 GUESS THE WORD
+
+*******************************************************************************/
 
 .guess-the-word-page {
   height: 100%;
