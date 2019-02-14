@@ -3,12 +3,17 @@
 body {
   height: 100vh;
   margin: 0;
-  font-family: monospace;
   font-size: 15px;
+}
+
+body, .start-button {
+  font-family: monospace;
+  color: #fff;
 }
 
 h1, h2 {
   font-family: 'Lato', sans-serif;
+  color: #fff;
 }
 
 /*******************************************************************************
@@ -24,14 +29,8 @@ header {
   background-image: linear-gradient(#0b5e80, #0B86C2);
 }
 
-.flex {
-  display: flex;
-  justify-content: center;
-}
-
 .logo {
   position: absolute;
-  z-index: 100;
 }
 
 .logo img {
@@ -62,12 +61,12 @@ footer {
 *******************************************************************************/
 
 main {
-  background-color: black;
-  /* background-image: url(../images/background-retro.jpg); */
-  background-size: contain;
   height: 80%;
   display: flex;
   justify-content: center;
+  background-color: black;
+  /* background-image: url(../images/background-retro.jpg); */
+  /* background-size: contain; */
 }
 
 section {
@@ -75,7 +74,8 @@ section {
     width: 75%;
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
+    
     border: 20px solid black;
     box-sizing: border-box;
     border-radius: 24px;
@@ -98,27 +98,20 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 
   border: 5px dotted #fff;
   border-radius: 1em;
-
-  color: #fff;
 
   overflow: auto;
 }
 
 .infobox h1 {
   font-size: 2em;
-  color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
   text-shadow: 2px 3px red;
-}
-
-.infobox h3 {
-  margin: 2em 0 0;
-  text-transform: uppercase;
 }
 
 .infobox ul {
@@ -146,7 +139,7 @@ section {
   color: red;
   text-transform: uppercase;
   letter-spacing: 5px;
-  text-shadow: 2px 3px white;
+  text-shadow: 2px 3px #fff;;
   font-style: italic;
 }
 
@@ -175,6 +168,14 @@ section {
 
 .start-button:hover {
   max-width: 35em;
+}
+
+.start-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
 }
 
 .start-button img {
@@ -217,49 +218,9 @@ section {
 
 .b2 {
   height: 100%;
+  width: 100%;
 }
 
 .start-page area {
   outline: none;
-}
-
-/*******************************************************************************
-
-                                 GUESS THE WORD
-
-*******************************************************************************/
-
-.guess-the-word-page {
-  height: 100%;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #844646;
-  font-size: 1.1em;
-}
-
-.usersList {
-  display: none;
-}
-
-.start-button-guessword {
-  max-width: 350px;
-}
-
-button.knappen {
-  background-color: #0b86c2;
-  border: 1px solid #0a6b9a;
-  border-radius: 4px;
-  height: 35px;
-  font-family: monospace;
-  font-size: 15px;
-  padding: 1px 20px;
-  font-weight: bold;
-  color: #f5f3f3;
-}
-
-button.knappen:hover, button.knappen:focus {
-  background-color: #0a6b9a;
-  border-color: #095a82;
 }
