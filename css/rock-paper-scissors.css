@@ -1,0 +1,82 @@
+#h2, .rock-paper-scissors-page {
+  /* color: black; */
+  text-shadow: 2px 3px black ;
+}
+
+#pointsText, #points, #pointsTextCPU, #pointsCPU {
+    position: absolute;
+    top: 65%;
+    font-size: 1.5em;
+}
+
+#pointsText, #points {
+  left: 30%;
+}
+
+#pointsTextCPU, #pointsCPU {
+  right: 30%;
+}
+
+.usersList {
+  display: none;
+  position: absolute;
+  top: 320px;
+  right: 31%;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.rock-paper-scissors-page {
+  flex-direction: column;
+}
+
+.rps-img {
+  max-width: 450px;
+  position: absolute;
+  top: 100px;
+  left: 226px;
+}
+
+.animation {
+  font-size: 1.2em;
+  animation-name: pointAnimation;
+  animation-duration: 1.5s;
+  height: 0px;
+}
+
+.textAnimation {
+  font-size: 1.2em;
+  animation-name: textAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  height: 0px;
+}
+
+@keyframes pointAnimation {
+  0% {font-size: 1.2em;}
+  50% {font-size: 2em;}
+  100% {font-size: 1.2em;}
+}
+
+@keyframes textAnimation {
+  0% {font-size: 1.2em;}
+  100% {font-size: 2em;}
+}
+
+button.knappen {
+  background-color: #0b86c2;
+  border: 1px solid #0a6b9a;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 20px;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: #f5f3f3;
+  position: relative;
+  bottom: 100px;
+}
+
+button.knappen:hover, button.knappen:focus {
+  background-color: #0a6b9a;
+  border-color: #095a82;
+}

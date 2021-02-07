@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+    <script src="../script/change.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" class="logo">
+        <img src="../images/logo.png" alt="logo img">
+      </a>
+    </header>
+    <main>
+      <section class="start-page">
+        <img id="bgd" src="../images/bd1.jpg" alt="Planets" usemap="#arcade" class="b2">
+        <map name="arcade">
+          <area shape="rect" coords="290,247,501,503" id="bgd2" alt="Rock Paper Scissors" href="rock-paper-scissors.html">
+          <area shape="rect" coords="508,254,720,502" id="bgd3" alt="Guess the Word" href="guess-the-word-index.html">
+          <area shape="rect" coords="625,253,840,501" id="bgd4" alt="Shotgun" href="shotgun.html">
+          <area shape="rect" coords="0,153,140,501" id="bgd5" alt="Dice" href="tärningskast.html">
+        </map>
+        <script type="text/javascript">
+              var bgd2 = $('#bgd2');
+              var bgd3 = $('#bgd3');
+              var bgd4 = $('#bgd4');
+              var bgd5 = $('#bgd5');
+              bgd2.hover(
+                 function(){ $('#bgd').attr('src','../images/bgd222.jpg') },
+                 function(){ $('#bgd').attr('src','../images/bd1.jpg') },
+              );
+              bgd3.hover(
+                 function(){ $('#bgd').attr('src','../images/bgd2233.jpg') },
+                 function(){ $('#bgd').attr('src','../images/bd1.jpg') },
+
+              );
+              bgd4.hover(
+                 function(){ $('#bgd').attr('src','../images/bgd444.jpg') },
+                 function(){ $('#bgd').attr('src','../images/bd1.jpg') },
+
+              );
+              bgd5.hover(
+                 function(){ $('#bgd').attr('src','../images/bgd555.jpg') },
+                 function(){ $('#bgd').attr('src','../images/bd1.jpg') },
+              );
+          </script>
+      </section>
+    </main>
+    <footer>
+        <div>
+            ©Gamemaker AB, 2019
+        </div>
+        <address>
+            Nackademin <br>
+            Tomtebodavägen 3A <br>
+            171 65 Solna
+        </address>
+    </footer>
+  </body>
+</html>

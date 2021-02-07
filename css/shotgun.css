@@ -1,0 +1,239 @@
+/*******************************************************************************
+
+                            START BUTTON & INFO BOX
+
+*******************************************************************************/
+
+.start-button {
+  padding: 2.5em;
+}
+
+/*******************************************************************************
+
+                                   INTERFACE
+
+*******************************************************************************/
+
+#interface {
+  width: 30%;
+  min-width: 20%;
+  height: 80%;
+  margin: 2em;
+  padding: 1em 2.5em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+  border: 5px dotted #fff;
+  border-radius: 1em;
+}
+
+#buttons-main, #usr-box, #cmp-box, #message-box, #text-box-bottom {
+  border: solid 2px gray;
+  border-radius: 1em;
+  background-color: lightseagreen;
+  color: #f5f3f3;
+}
+
+/*******************************************************************************
+
+                                  GAME BUTTONS
+
+*******************************************************************************/
+
+.interface-buttons {
+  border: 1px solid white;
+  border-radius: 10px;
+
+  font-family: monospace;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #f5f3f3;
+  text-shadow: 2px 1px black;
+
+  outline: none;
+}
+
+.interface-buttons:hover {
+  text-transform: uppercase;
+  color: magenta;
+}
+
+#buttons-main {
+  height: 35%;
+  width: 90%;
+  margin: 1em 0 0;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: black;
+}
+
+#buttons-top, #buttons-bottom {
+  height: 50%;
+  width: 100%;
+
+  align-items: center;
+  justify-content: space-around;
+}
+
+#buttons-top {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#buttons-top .interface-buttons {
+  height: 70%;
+  width: 40%;
+}
+
+#reload-btn {
+  background-color: lightblue;
+}
+
+#reload-btn:hover {
+  background-color: blue;;
+}
+
+#block-btn {
+  background-color: lightyellow;
+}
+
+#block-btn:hover {
+  background-color: yellow;
+}
+
+#shoot-btn {
+  height: 90%;
+  width: 50%;
+  background-color: gray;
+}
+
+#shoot-btn:hover {
+  height: 100%;
+  width: 60%;
+  font-size: 2em;
+  background-color: black;
+  text-shadow: 2px 1px yellow;
+}
+
+#shotgun-btn {
+  width: 90%;
+  height: 90%;
+  background-color: darkred;
+  text-transform: uppercase;
+}
+
+#shotgun-btn:hover {
+  width: 100%;
+  height: 100%;
+
+  background-color: red;
+  font-size: 3em;
+  letter-spacing: 5px;
+  color: yellow;
+  text-shadow: 3px 2px black;
+}
+
+#continue-btn {
+  width: 50%;
+  height: 50%;
+  background-color: #0b86c2;
+}
+
+#continue-btn:hover {
+  background-color: #0a6b9a;
+}
+
+/*******************************************************************************
+
+                                 AMMO & MESSAGES
+
+*******************************************************************************/
+
+.text-boxes {
+  display: flex;
+}
+
+#text-box, #usr-box, #cmp-box, #message-box {
+  flex-direction: column;
+}
+
+#text-box {
+  height: 80%;
+  width: 100%;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+#text-box-top {
+  height: 20%;
+  justify-content: space-between;
+}
+
+#text-box-middle {
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+#text-box-bottom {
+  height: 20%;
+  justify-content: center;
+}
+
+#usr-box, #cmp-box {
+  width: 45%;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.bullet-counter {
+  font-size: 3em;
+}
+
+#bullet-counter-usr {
+  color: #f5f3f3;
+  text-shadow: 2px 2px black;
+}
+
+#bullet-counter-cmp {
+  color: black;
+  text-shadow: 2px 2px #f5f3f3;
+}
+
+#message-box {
+  height: 80%;
+  width: 100%;
+  padding: 0 2em;
+
+  justify-content: center;
+
+  font-size: 14px;
+  text-shadow: 2px 1px black;
+}
+
+.msg {
+  margin: 5px 0;
+}
+
+#winner-msg {
+  align-self: center;
+  position: absolute;
+
+  padding: 1.2em;
+  border-radius: 1em;
+
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  color: #f5f3f3;
+  text-shadow: 2px 3px red;
+}

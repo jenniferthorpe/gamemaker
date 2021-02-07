@@ -2,45 +2,44 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Gissa ordet</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="../script/guess-the-word.js"></script>
+    <title>Guess the Word</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/guess-the-word.css">
   </head>
   <body>
     <header>
-      <img src="../images/kontroll.png" alt="logo img">
-      <nav>
-        <a class="menubuttons" href="start.html">Startsida</a>
-        <a class="menubuttons" href="guess-the-word.html">Gissa ordet</a>
-        <a class="menubuttons" href="shotgun.html">Shotgun</a>
-        <a class="menubuttons" href="rock-paper-scissors.html">Sten sax påse</a>
-      </nav>
+      <a href="./index.html" class="logo">
+        <img src="../images/logo.png" alt="logo img">
+      </a>
     </header>
     <main>
       <section class="guess-the-word-page">
         <br>
-        <h2 id="h2">Tryck på knappen för att börja</h2>
-        <br>
-        <button onclick="randomFunction()" class="knappen">Knappen</button>
-        <br>
+        <h2 id="h2"></h2>
+        <button onclick="randomFunction()" class="knappen">Let's go!</button>
         <div class="usersList">
-        <input type="radio" name="list" id="sump" value="sump" onclick="checkAnswer()">sump
-        <input type="radio" name="list" id="sl" value="minut" onclick="checkAnswer()">minut
-        <input type="radio" name="list" id="valp" value="valp" onclick="checkAnswer()">valp
+          <input type="radio" name="list" id="Damage" value="Damage" onclick="checkAnswer()">Damage
+          <input type="radio" name="list" id="Book" value="Book" onclick="checkAnswer()">Book
+          <input type="radio" name="list" id="Play" value="Play" onclick="checkAnswer()">Play
+          <input type="radio" name="list" id="Ape" value="Ape" onclick="checkAnswer()">Ape
+          <input type="radio" name="list" id="Telephone" value="Telephone" onclick="checkAnswer()">Telephone
         </div>
-        <br>
         <h3 id="message"></h3>
+        <div id="pointsText">Points: </div><h3 id="points"></h3>
+        <img src="../images/books.png" alt="Pile of books" class="books">
+        <!-- <img src="../images/book-pile.png" alt="Pile of books" class="books"> -->
       </section>
     </main>
     <footer>
-        <div>
-            ©Gamemaker AB, 2019
-        </div>
-        <address>
-            Nackademin <br>
-            Tomtebodavägen 3A <br>
-            171 65 Solna
-        </address>
+      <div>
+        ©Gamemaker AB, 2019
+      </div>
+      <address>
+        Nackademin <br>
+        Tomtebodavägen 3A <br>
+        171 65 Solna
+      </address>
     </footer>
   </body>
+  <script src="../script/guess-the-word.js"></script>
 </html>

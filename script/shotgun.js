@@ -1,173 +1,347 @@
-function start() {
+let usr;
+let cmp;
+let winner;
+let loser;
 
-	let gameArea = document.getElementsByClassName("shotgun-page")[0];
+let gameArea = document.getElementsByClassName("shotgun-page")[0];
 
-	let startArea = document.createElement('div');
+let interface = document.createElement('div');
+interface.setAttribute('id', 'interface');
 
-	let input = document.createElement('input');
-	input.setAttribute('value', "player");
+let buttonsMain = document.createElement('div');
+buttonsMain.setAttribute('id', 'buttons-main');
 
-	let startBtn = document.createElement('button');
-	let t = document.createTextNode('start');
-	startBtn.appendChild(t);
-	startBtn.addEventListener('click', function() {
-		interface(input, gameArea);
-		gameArea.removeChild(startArea);
-	});
+let buttonsTop = document.createElement('div');
+buttonsTop.setAttribute('id', 'buttons-top');
 
-	gameArea.appendChild(startArea);
-	startArea.appendChild(input);
-	startArea.appendChild(startBtn);
+let buttonsBottom = document.createElement('div');
+buttonsBottom.setAttribute('id', 'buttons-bottom');
+
+let reloadBtn = document.createElement('button');
+reloadBtn.setAttribute('id', 'reload-btn');
+reloadBtn.setAttribute('class', 'interface-buttons');
+t = document.createTextNode('reload');
+reloadBtn.appendChild(t);
+reloadBtn.addEventListener('click', function() {
+  usr.reload();
+  round();
+});
+
+let blockBtn = document.createElement('button');
+blockBtn.setAttribute('id', 'block-btn');
+blockBtn.setAttribute('class', 'interface-buttons');
+t = document.createTextNode('block');
+blockBtn.appendChild(t);
+blockBtn.addEventListener('click', function() {
+  usr.block();
+  round();
+});
+
+let shootBtn = document.createElement('button');
+shootBtn.setAttribute('id', 'shoot-btn');
+shootBtn.setAttribute('class', 'interface-buttons');
+t = document.createTextNode('shoot');
+shootBtn.appendChild(t);
+shootBtn.addEventListener('click', function() {
+  usr.shoot();
+  round();
+});
+
+let sgBtn = document.createElement('button');
+sgBtn.setAttribute('id', 'shotgun-btn');
+sgBtn.setAttribute('class', 'interface-buttons');
+t = document.createTextNode('shotgun');
+sgBtn.appendChild(t);
+sgBtn.addEventListener('click', function() {
+  usr.shotgun();
+  round();
+});
+
+let continueBtn = document.createElement('button');
+continueBtn.setAttribute('id', 'continue-btn');
+continueBtn.setAttribute('class', 'interface-buttons');
+t = document.createTextNode('play again');
+continueBtn.appendChild(t);
+continueBtn.addEventListener('click', function() {
+  buttonsMain.removeChild(continueBtn);
+  newGame();
+});
+
+let textbox = document.createElement('div');
+textbox.setAttribute('id', 'text-box');
+textbox.setAttribute('class', 'text-boxes');
+
+let textboxTop = document.createElement('div');
+textboxTop.setAttribute('id', 'text-box-top');
+textboxTop.setAttribute('class', 'text-boxes');
+
+let textboxMiddle = document.createElement('div');
+textboxMiddle.setAttribute('id', 'text-box-middle');
+textboxMiddle.setAttribute('class', 'text-boxes');
+
+let textboxBottom = document.createElement('div');
+textboxBottom.setAttribute('id', 'text-box-bottom');
+textboxBottom.setAttribute('class', 'text-boxes');
+
+let usrbox = document.createElement('div');
+usrbox.setAttribute('id', 'usr-box');
+usrbox.setAttribute('class', 'text-boxes');
+
+let cmpbox = document.createElement('div');
+cmpbox.setAttribute('id', 'cmp-box');
+cmpbox.setAttribute('class', 'text-boxes');
+
+let messagebox = document.createElement('div');
+messagebox.setAttribute('id', 'message-box');
+messagebox.setAttribute('class', 'text-boxes');
+
+let ammoUsr = document.createElement('div');
+ammoUsr.setAttribute('class', 'player-ammo');
+
+let bulletCountUsr = document.createElement('div');
+bulletCountUsr.setAttribute('id', 'bullet-counter-usr');
+bulletCountUsr.setAttribute('class', 'bullet-counter');
+
+let ammoCmp = document.createElement('div');
+ammoCmp.setAttribute('class', 'player-ammo');
+
+let bulletCountCmp = document.createElement('div');
+bulletCountCmp.setAttribute('id', 'bullet-counter-cmp');
+bulletCountCmp.setAttribute('class', 'bullet-counter');
+
+let msg1 = document.createElement('div');
+msg1.setAttribute('id', 'msg-one');
+msg1.setAttribute('class', 'msg');
+
+let msg2 = document.createElement('div');
+msg2.setAttribute('id', 'msg-two');
+msg2.setAttribute('class', 'msg');
+
+let winnerMsg = document.createElement('div');
+winnerMsg.setAttribute('id', 'winner-msg');
+winnerMsg.setAttribute('class', 'text-boxes');
+
+
+
+function newGame() {
+
+  let sb = document.getElementsByClassName('start-button')[0];
+	sb.style.display = 'none';
+
+  gameArea.appendChild(interface);
+
+  interface.appendChild(buttonsMain);
+
+  buttonsMain.appendChild(buttonsTop);
+  buttonsMain.appendChild(buttonsBottom);
+
+  buttonsMain.appendChild(sgBtn);
+  buttonsMain.appendChild(continueBtn);
+
+  buttonsTop.appendChild(reloadBtn);
+  buttonsTop.appendChild(blockBtn);
+
+  buttonsBottom.appendChild(shootBtn);
+
+  buttonsTop.style.display = 'flex';
+  buttonsBottom.style.display = 'flex';
+
+  reloadBtn.style.display = 'block';
+  blockBtn.style.display = 'none';
+  shootBtn.style.display = 'none';
+
+  sgBtn.style.display = 'none';
+  continueBtn.style.display = 'none';
+
+  interface.appendChild(textbox);
+
+  textbox.appendChild(textboxTop);
+  textbox.appendChild(textboxMiddle);
+  textbox.appendChild(textboxBottom);
+
+  textboxTop.appendChild(usrbox);
+  textboxTop.appendChild(cmpbox);
+
+  usrbox.appendChild(ammoUsr);
+  usrbox.appendChild(bulletCountUsr);
+
+  cmpbox.appendChild(ammoCmp);
+  cmpbox.appendChild(bulletCountCmp);
+
+  textboxMiddle.appendChild(messagebox);
+
+  messagebox.appendChild(msg1);
+  messagebox.appendChild(msg2);
+
+  textboxBottom.appendChild(winnerMsg);
+
+
+  usr = new Player('player');
+  cmp = new Player('data');
+
+  msg1.innerHTML = '';
+  msg2.style.display = 'none';
+  winnerMsg.style.display = 'none';
+
+  ammoUsr.innerHTML = usr.name + ' ammo';
+  bulletCountUsr.innerHTML = usr.bullets;
+  ammoCmp.innerHTML = cmp.name + ' ammo';
+  bulletCountCmp.innerHTML = cmp.bullets;
 }
 
-function interface(input, gameArea) {
+function round() {
 
-	let winner;
-	let usr = new Player(input.value);
-	let cmp = new Player('data');
+  cmp.move();
+  updateButtons();
+  updateText();
 
-	let interface = document.createElement('div');
-	gameArea.appendChild(interface);
+}
 
-	let buttons = document.createElement('div');
+function findWinner() {
 
-	let reloadBtn = document.createElement('button');
-	let t = document.createTextNode('reload');
-	reloadBtn.appendChild(t);
-	reloadBtn.addEventListener('click', function() {
-		usr.reload();
-		game();
-	});
+  if (usr.action === 'shoots' &&
+    (cmp.action === 'reloads' || cmp.action === 'clicks') ||
+    (usr.action === 'shotgun' && cmp.action !== 'shotgun')) {
 
-	let shootBtn = document.createElement('button');
-	t = document.createTextNode('shoot');
-	shootBtn.appendChild(t);
-	shootBtn.addEventListener('click', function() {
-		usr.shoot();
-		game();
-	});
+    winner = usr;
+    loser = cmp;
 
-	let blockBtn = document.createElement('button');
-	t = document.createTextNode('block');
-	blockBtn.appendChild(t);
-	blockBtn.addEventListener('click', function() {
-		usr.block();
-		game();
-	});
+  }
+  if (cmp.action === 'shoots' &&
+    (usr.action === 'reloads' || usr.action === 'clicks') ||
+    (cmp.action === 'shotgun' && usr.action !== 'shotgun')) {
 
-	let sgBtn = document.createElement('button');
-	t = document.createTextNode('shotgun');
-	sgBtn.appendChild(t);
-	sgBtn.addEventListener('click', function() {
-    usr.shotgun();
-    game();
-	});
+    winner = cmp;
+    loser = usr;
 
-  let continueBtn = document.createElement('button');
-  t = document.createTextNode('play again?');
-  continueBtn.appendChild(t);
-  continueBtn.addEventListener('click', function() {
-    gameArea.removeChild(interface);
-    start();
-  });
+  }
+}
 
-	let bulletCountUsr = document.createElement('p');
-	bulletCountUsr.innerHTML = usr.name + ' ammo';
+function isWinner() {
 
-	let ammoUsr = document.createElement('p');
-	ammoUsr.innerHTML = usr.bullets;
+  findWinner();
 
-	let bulletCountCmp = document.createElement('p');
-	bulletCountCmp.innerHTML = cmp.name + ' ammo';
+  if (winner === usr || winner === cmp) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
-	let ammoCmp = document.createElement('p');
-	ammoCmp.innerHTML = cmp.bullets;
+function updateText() {
 
-	let msg = document.createElement('p');
-  let msg2 = document.createElement('p');
+  bulletCountUsr.innerHTML = usr.bullets;
+  bulletCountCmp.innerHTML = cmp.bullets;
 
-	interface.appendChild(buttons);
+  if (isWinner() && winner.action === 'shotgun') {
 
-	buttons.appendChild(reloadBtn);
-	buttons.appendChild(shootBtn);
-	buttons.appendChild(blockBtn);
-	buttons.appendChild(sgBtn);
+    winner.action = 'takes out the shotgun';
 
-	interface.appendChild(bulletCountUsr);
-	interface.appendChild(ammoUsr);
-	interface.appendChild(bulletCountCmp);
-	interface.appendChild(ammoCmp);
-	interface.appendChild(msg);
-  interface.appendChild(msg2);
+  }
 
-	function round() {
+  if (cmp.action === 'clicks') {
 
-		cmp.move();
+    msg1.innerHTML = usr.name + ' ' + usr.action
+    + ' while a frenzied ' + cmp.name + ' tries to fire its gun ...';
 
-		if (usr.action === 'shoots' &&
-			(cmp.action === 'reloads' || cmp.action === 'clicks') ||
-			(usr.action === 'shotgun' && cmp.action !== 'shotgun')) {
+    msg2.innerHTML = '... but forgets to put a bullet in it first';
 
-			winner = usr;
+    msg2.style.display = 'block';
 
-		}
-		if (cmp.action === 'shoots' &&
-			(usr.action === 'reloads' || usr.action === 'clicks') ||
-			(cmp.action === 'shotgun' && usr.action !== 'shotgun')) {
+  }
+  else if (usr.action === 'shotgun' && cmp.action === 'shotgun') {
 
-			winner = cmp;
+    msg1.innerHTML = 'both players reaches for the shotgun';
 
-		}
-		if (winner != undefined && winner.action === 'shotgun') {
+    msg2.innerHTML = usr.name + ' fumbles with it while '
+    + cmp.name + ' looks confused and the battle continues';
 
-			winner.action = 'takes out the shotgun';
+    msg2.style.display = 'block';
 
-		}
-	}
+  }
+  else {
 
-	function game() {
+    msg1.innerHTML = usr.name + ' ' + usr.action
+    + ' while ' + cmp.name + ' ' + cmp.action;
 
-		if (usr.action === 'no ammo') {
+    if (usr.action === 'shoots' && cmp.action === 'shoots') {
 
-			msg.innerHTML = 'not enough ammo to use the shotgun';
+      msg2.innerHTML = 'both players miss their target out of shock!';
 
-		}
+      msg2.style.display = 'block';
 
-		else {
+    }
+    else {
 
-			round();
+      msg2.innerHTML = '';
 
-	    ammoUsr.innerHTML = usr.bullets;
-	    ammoCmp.innerHTML = cmp.bullets;
+      msg2.style.display = 'none';
 
-			msg.innerHTML = usr.name + ' ' + usr.action
-	    + ' while ' + cmp.name + ' ' + cmp.action;
+    }
+  }
+  if (isWinner()) {
 
-			msg2.innerHTML = '';
+    if (winner.action === 'takes out the shotgun'
+    && loser.action === 'shoots') {
 
-			if (usr.action === 'shoots' && cmp.action === 'shoots') {
+      msg1.innerHTML = winner.name + ' ' + winner.action
+      + ' while a frightned ' + loser.name + ' ' + loser.action + ' ... ';
 
-				msg2.innerHTML = 'both players miss their target out of shock!';
+      msg2.innerHTML =
+      '... who panicked and with a shaky hand fails to aim in the right direction';
 
-			}
-			if (usr.action === 'shotgun' && cmp.action === 'shotgun') {
+      msg2.style.display = 'block';
 
-				msg.innerHTML = 'both players reaches for the shotgun';
+    }
 
-				msg2.innerHTML = usr.name + ' fumbles with it while '
-				+ cmp.name + ' looks confused and the battle continues';
+    winnerMsg.innerHTML = 'winner is ' + winner.name;
 
-			}
-	    if (winner === usr || winner === cmp) {
+    winnerMsg.style.display = 'flex';
 
-				interface.removeChild(buttons);
+  }
+}
 
-				msg2.innerHTML = 'winner is ' + winner.name;
+function updateButtons() {
 
-				interface.appendChild(continueBtn);
-			}
-		}
-	}
+  switch (cmp.bullets) {
+    case 0:
+      blockBtn.style.display = 'none';
+      break;
+    case 1:
+      blockBtn.style.display = 'block';
+      break;
+  }
+
+  switch (usr.bullets) {
+    case 0:
+      shootBtn.style.display = 'none';
+      break;
+    case 1:
+      shootBtn.style.display = 'block';
+      break;
+    case 3:
+      buttonsTop.style.display = 'none';
+      buttonsBottom.style.display = 'none';
+      sgBtn.style.display = 'block';
+      break;
+  }
+
+  if (usr.action === 'shotgun' && cmp.action === 'shotgun') {
+    buttonsTop.style.display = 'flex';
+    buttonsBottom.style.display = 'flex';
+    sgBtn.style.display = 'none';
+  }
+
+  if (isWinner()) {
+
+    buttonsTop.style.display = 'none';
+    buttonsBottom.style.display = 'none';
+    sgBtn.style.display = 'none';
+
+    continueBtn.style.display = 'block';
+
+  }
 }
 
 function Player(name) {
@@ -202,25 +376,43 @@ function Player(name) {
     }
 	}
 
+  let n1, n2;
+
 	this.move = function() {
 
-		let n = parseInt((3 * Math.random()));
+    let sameNumber = true;
 
-		if (this.bullets === 3) {
-			this.shotgun();
-		}
-		else {
-			switch (n) {
-				case 0:
-					this.block();
-					break;
-				case 1:
-				  this.reload();
-					break;
-				case 2:
-				  this.shoot();
-					break;
-			}
-		}
+    while (sameNumber) {
+
+      if (n1 !== n2) {
+
+        if (this.bullets === 3) {
+          this.shotgun();
+        }
+        else {
+          switch (n1) {
+            case 0:
+              this.block();
+              break;
+            case 1:
+              this.reload();
+              break;
+            case 2:
+              this.shoot();
+              break;
+          }
+        }
+
+        n2 = n1;
+
+        sameNumber = false;
+
+      }
+      else {
+
+        n1 = parseInt((3 * Math.random()));
+
+      }
+    }
 	}
 }

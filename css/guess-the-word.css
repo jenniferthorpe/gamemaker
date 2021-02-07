@@ -1,0 +1,81 @@
+.guess-the-word-page {
+  flex-direction: column;
+  text-align: center;
+}
+
+.start-button {
+  font-size: 17px;
+  background-color: transparent;
+}
+
+.usersList {
+  display: none;
+}
+
+.start-button-guessword {
+  max-width: 350px;
+}
+
+h3#points {
+  height: 85px;
+  margin-top: -10px;
+}
+
+.animation {
+  font-size: 1.2em;
+  animation-name: pointAnimation;
+  animation-duration: 1.5s;
+  height: 0px;
+}
+
+.textAnimation {
+  font-size: 1.2em;
+  animation-name: textAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  height: 0px;
+}
+
+@keyframes pointAnimation {
+  0% {font-size: 1.2em;}
+  50% {font-size: 2em;}
+  100% {font-size: 1.2em;}
+}
+
+@keyframes textAnimation {
+  0% {font-size: 1.2em;}
+  100% {font-size: 2em;}
+}
+
+button.knappen {
+  background-color: #0b86c2;
+  border: 1px solid #0a6b9a;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 20px;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: #f5f3f3;
+}
+
+button.knappen:hover, button.knappen:focus {
+  background-color: #0a6b9a;
+  border-color: #095a82;
+}
+
+.books {
+  width: 320px;
+  height: auto;
+  position: absolute;
+  bottom: 15%;
+  left: 278px;
+  opacity: 0.9;
+}
+.books2 {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: 13%;
+  left: 250px;
+  opacity: 0.7;
+}

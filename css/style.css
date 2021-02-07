@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-size: 15px;
+}
+
+body, .start-button {
+  font-family: monospace;
+  color: #fff;
+}
+
+h1, h2 {
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+
+/*******************************************************************************
+
+                                     HEADER
+
+*******************************************************************************/
+
+header {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(#0b5e80, #0B86C2);
+}
+
+.logo {
+  position: absolute;
+}
+
+.logo img {
+  width: 220px;
+}
+
+
+/*******************************************************************************
+
+                                     FOOTER
+
+*******************************************************************************/
+
+footer {
+  height: 10%;
+  padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(#06DBB6, #13b397);
+  /* background-image: linear-gradient(#0b5e80, #06DBB6); */
+}
+
+/*******************************************************************************
+
+                            STANDARD MAIN BACKGROUND
+
+*******************************************************************************/
+
+main {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  /* background-image: url(../images/background-retro.jpg); */
+  /* background-size: contain; */
+}
+
+section {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    border: 20px solid black;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-image: linear-gradient(to bottom right, #0f4239, #169880, #186759);
+}
+
+/*******************************************************************************
+
+                               INFO BOX GAME PAGES
+
+*******************************************************************************/
+
+.infobox {
+  width: 30%;
+  min-width: 20%;
+  height: 80%;
+  padding: 1em 2.5em;
+  margin: 2em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: 5px dotted #fff;
+  border-radius: 1em;
+
+  overflow: auto;
+}
+
+.infobox h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 3px red;
+}
+
+.infobox ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  border: 3px dotted #fff;
+  border-radius: 1em;
+}
+
+.infobox li {
+  padding: 1em;
+  border-bottom: 3px dotted #fff;
+}
+
+.infobox li:last-child {
+  border: none;
+}
+
+.glhf {
+  font-size: 1.5em;
+  margin: 2em;
+
+  color: red;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 3px #fff;;
+  font-style: italic;
+}
+
+/*******************************************************************************
+
+                             START BUTTON GAME PAGES
+
+*******************************************************************************/
+
+.start-button {
+  max-width: 30em;
+
+  margin: 3em;
+  padding: 0;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: black;
+  border-radius: 1em;
+  border: none;
+}
+
+.start-button:hover {
+  max-width: 35em;
+}
+
+.start-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.start-button img {
+  width: 100%;
+}
+
+.start-button-text {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 3px red;
+}
+
+.start-button-text:hover {
+  font-style: italic;
+  color: red;
+  text-shadow: 2px 3px white;
+  font-size: 4em;
+}
+
+/*******************************************************************************
+
+                                  START PAGE
+
+*******************************************************************************/
+
+.start-page {
+  border: none;
+}
+
+.b2 {
+  height: 100%;
+  width: 100%;
+}
+
+.start-page area {
+  outline: none;
+}
